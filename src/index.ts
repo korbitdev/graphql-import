@@ -141,7 +141,7 @@ function isEmptySDL(sdl: string): boolean {
   return sdl
     .split('\n')
     .map(l => l.trim())
-    .filter(l => !(l.length === 0 || l.startsWith('#')))
+    .filter(l => !(l.length === 0 || l.startsWith('# import') || l.startsWith('#import')))
     .length === 0
 }
 
